@@ -2,7 +2,7 @@ import React from "react";
 
 const LatestNewsCard = ({ news }) => {
   const { date, img, procedure, title } = news;
-  console.log(news);
+  // console.log(news);
   return (
     <div class="card ml-5 mt-5" style={{ width: "30rem" }}>
       <img src={img} class="card-img-top" alt="..." />

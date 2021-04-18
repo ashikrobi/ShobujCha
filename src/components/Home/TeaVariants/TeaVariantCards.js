@@ -1,6 +1,6 @@
 import React from "react";
 
-const TeaVariantCards = ({ product }) => {
+const TeaVariantCards = ({ product, handleShopNow }) => {
   const { variant, price, image } = product;
   return (
     <div className="col-md-4 text-center">
@@ -11,7 +11,12 @@ const TeaVariantCards = ({ product }) => {
       />
       <h5 className="mt-3 mb-3">{variant}</h5>
       <h5 className="mt-3 mb-3">${price}</h5>
-      <button className="btn btn-success">SHOP NOW</button>
+      <button
+        className="btn btn-success"
+        onClick={() => handleShopNow(product)}
+      >
+        SHOP NOW
+      </button>
     </div>
   );
 };

@@ -13,50 +13,54 @@ import LoginForm from "./components/LoginForm/LoginForm";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import AddReview from "./components/Home/Admin/AddReview/AddReview";
 
-//user context
+//context used in this project
 export const UserContext = createContext();
+export const OrderContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [order, setOrder] = useState([]);
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
-          <PrivateRoute path="/admin">
-            <Admin></Admin>
-          </PrivateRoute>
-          <Route path="/tea_variant">
-            <AddTeaVariant></AddTeaVariant>
-          </Route>
-          <Route path="/add_review">
-            <AddReview></AddReview>
-          </Route>
-          <Route path="/orderList">
-            <OrderList></OrderList>
-          </Route>
-          <Route path="/makeAdmin">
-            <MakeAdmin></MakeAdmin>
-          </Route>
-          <PrivateRoute path="/cart">
-            <Cart></Cart>
-          </PrivateRoute>
-          <Route path="/login">
-            <LoginForm></LoginForm>
-          </Route>
-        </Switch>
-      </Router>
+      <OrderContext.Provider value={[order, setOrder]}>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <PrivateRoute path="/admin">
+              <Admin></Admin>
+            </PrivateRoute>
+            <Route path="/tea_variant">
+              <AddTeaVariant></AddTeaVariant>
+            </Route>
+            <Route path="/add_review">
+              <AddReview></AddReview>
+            </Route>
+            <Route path="/orderList">
+              <OrderList></OrderList>
+            </Route>
+            <Route path="/makeAdmin">
+              <MakeAdmin></MakeAdmin>
+            </Route>
+            <PrivateRoute path="/cart">
+              <Cart></Cart>
+            </PrivateRoute>
+            <Route path="/login">
+              <LoginForm></LoginForm>
+            </Route>
+          </Switch>
+        </Router>
+      </OrderContext.Provider>
     </UserContext.Provider>
   );
 }

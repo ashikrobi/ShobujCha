@@ -126,14 +126,15 @@ const LoginForm = () => {
 
   return (
     <div className="row">
-      <div className="col-md-4">
+      <div className="col-md-5">
         <img
-          style={{ width: "125%", height: "100vh" }}
+          style={{ minHeight: "85vh" }}
+          className="img-fluid"
           src={form_page}
           alt=""
         />
       </div>
-      <div id="form-container" className="col-md-4">
+      <div id="form-container" className="col-md-5">
         <form onSubmit={handleSubmit}>
           {newUser && (
             <div class="mb-3">
