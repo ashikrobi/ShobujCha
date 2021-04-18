@@ -12,7 +12,8 @@ const NavBar = () => {
       <div className="container">
         <p className="navbar-brand">
           {" "}
-          <img style={{ height: "64px" }} src={teaLogo} alt="" /> ShobujCha
+          <img style={{ height: "64px" }} src={teaLogo} alt="" /> Shobuj
+          <span className="text-success">Cha</span>
         </p>
         {loggedInUser.email && <h5 className="mr-2">{loggedInUser.name}</h5>}
         <button
@@ -27,11 +28,6 @@ const NavBar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/home">
                 HOME
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/products">
-                PRODUCT
               </Link>
             </li>
             <li className="nav-item">

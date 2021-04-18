@@ -2,7 +2,6 @@ import "./App.css";
 import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home/Home";
-import Products from "./components/Home/Products/Products";
 import About from "./components/Home/About/About";
 import Contact from "./components/Home/Contact/Contact";
 import Cart from "./components/Home/Cart/Cart";
@@ -28,9 +27,6 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
-          </Route>
-          <Route path="/products">
-            <Products></Products>
           </Route>
           <Route path="/about">
             <About></About>
