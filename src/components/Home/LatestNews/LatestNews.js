@@ -38,7 +38,7 @@ const LatestNews = () => {
       </div>
       <div className="row d-flex justify-content-center mb-5 pb-5">
         {latestNews.map((news) => (
-          <LatestNewsCard news={news}></LatestNewsCard>
+          <LatestNewsCard news={news} key={news.id}></LatestNewsCard>
         ))}
       </div>
     </div>

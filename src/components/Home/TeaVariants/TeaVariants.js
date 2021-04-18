@@ -34,11 +34,12 @@ const TeaVariants = () => {
       className="d-flex justify-content-center"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{ transform: props.xys.interpolate(trans) }}
+      style={{ transform: props.xys.to(trans) }}
     >
       <div className="w-75 row mt-5 pt-5 pb-5 mb-5">
         {teaVariants.map((product) => (
           <TeaVariantCards
+            key={product._id}
             product={product}
             handleShopNow={handleShopNow}
           ></TeaVariantCards>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import NavBar from "../NavBar/NavBar";
 import shoppingCart from "../../../images/shopping-cart.png";
 import { OrderContext } from "../../../App";

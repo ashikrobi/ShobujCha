@@ -12,7 +12,7 @@ const Reviews = () => {
     <div className="d-flex justify-content-center">
       <div className="w-75 row mt-5 pt-5 pb-5 mb-5">
         {reviews.map((review) => (
-          <ReviewsCard review={review}></ReviewsCard>
+          <ReviewsCard review={review} key={review._id}></ReviewsCard>
         ))}
       </div>
     </div>
