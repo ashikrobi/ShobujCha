@@ -39,7 +39,7 @@ const Cart = () => {
               ))}
               <tr>
                 <th scope="row"></th>
-                <td colspan="2">Total:</td>
+                <td colSpan="2">Total:</td>
                 <td>$100</td>
               </tr>
               <tr>
