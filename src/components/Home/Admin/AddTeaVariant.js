@@ -19,7 +19,7 @@ const AddTeaVariant = () => {
     formData.append("variant", variantInfo.variant);
     formData.append("price", variantInfo.price);
 
-    fetch("http://localhost:5000/addTeaVariant", {
+    fetch("https://secret-fjord-76461.herokuapp.com/addTeaVariant", {
       method: "POST",
       body: formData,
     })

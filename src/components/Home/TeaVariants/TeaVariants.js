@@ -19,7 +19,7 @@ const TeaVariants = () => {
   const [teaVariants, setTeaVariants] = useState([]);
   const [order, setOrder] = useContext(OrderContext);
   useEffect(() => {
-    fetch("http://localhost:5000/teaCollection")
+    fetch("https://secret-fjord-76461.herokuapp.com/teaCollection")
       .then((res) => res.json())
       .then((data) => setTeaVariants(data));
   }, []);

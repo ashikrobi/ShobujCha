@@ -13,7 +13,7 @@ const AddReview = () => {
     formData.append("userName", review.userName);
     formData.append("comment", review.comment);
 
-    fetch("http://localhost:5000/addReview", {
+    fetch("https://secret-fjord-76461.herokuapp.com/addReview", {
       method: "POST",
       body: formData,
     })
