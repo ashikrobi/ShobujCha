@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import shoppingCart from "../../../images/shopping-cart.png";
 import { OrderContext } from "../../../App";
@@ -7,6 +7,11 @@ import CartTableRow from "./CartTableRow";
 const Cart = () => {
   const [order, setOrder] = useContext(OrderContext);
   console.log(order);
+  const total = order.reduce(
+    (sum, itemCost) => sum + parseInt(itemCost.price),
+    0
+  );
+  console.log(total);
   return (
     <div>
       <NavBar></NavBar>
@@ -40,7 +45,7 @@ const Cart = () => {
               <tr>
                 <th scope="row"></th>
                 <td colSpan="2">Total:</td>
-                <td>$100</td>
+                <td>${total}</td>
               </tr>
               <tr>
                 <th scope="row"></th>
